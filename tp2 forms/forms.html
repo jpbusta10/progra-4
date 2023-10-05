@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Forms</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <h1>FORMS</h1>
+</head>
+
+<body>
+   <div id="error"></div>
+    <div class="wrapper">
+        <img src="UTN_logo.jpg" alt="Image">
+    <form onsubmit="return validateForm()">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" placeholder="first name">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" placeholder="last name">
+        <br>
+        <label for="age">Age</label>
+        <input type="number" id="age" placeholder="age">
+        <br>
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="email">
+        <br>
+        <label for="password">Password</label>
+        <input type="password" id="password">
+        <br>
+        <input type="submit" value="submit">
+    </form>
+    </div>
+</body>
+<script>
+    function validateForm() {
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+        const age = document.getElementById("age");
+        const password = document.getElementById("password")
+        const email = document.getElementById("email");
+        const regexName = /^[a-zA-Z]{1,20}/;
+        const regexPass = /^(?=.*[a-z])(?=.*[A-Z]).{9,20}/;
+        const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const errorElement = document.getElementById('error');
+        var messages = [];
+        var flag = 0;
+        if(!firstName.match(regexName) || lastName.match(regexName)){
+            messages.push("name must have at up to 20 characters")
+            flag = 1;
+        }
+        if(!password.match(regexPass)){
+            alert("password has to be 9-20 characters and at least one cap letter");
+            flag = 1;
+        }
+        if(!email.match(regexEmail)){
+            alert("not valid email");
+            flag = 1; 
+        }
+        if(message.length > 0){
+            e.preventDefault();
+            errorElement.innerHTML = messages.join(', ');
+        }
+        if(flag == 1){
+            return false
+        }
+        else{
+            return true;
+        }
+    }
+    
+</script>
+
+</html>

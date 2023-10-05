@@ -1,0 +1,31 @@
+html {
+    font-family:Arial, Helvetica, sans-serif
+}
+.choose {
+    display: flex;
+    align-items: center;
+    height: 20vh;
+    text-align: right; 
+}
+form {
+    border: 1px solid #cccccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    background-color: aquamarine;
+}
+button[type="button"] {
+    margin: 10px auto;
+}
+.myList {
+    border: 1px solid #cccccc ;
+    background-color: rgb(29, 135, 64) ;
+    width: fit-content;
+    padding: 10px auto; 
+    list-style:circle; 
+    margin: 0; 
+    text-align: right;
+}
+
+
+

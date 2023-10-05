@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <h1>Wishlist</h1>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="choose">
+    <form>
+        <label for="1">Mate</label>
+        <button type="button" id="mate" onclick="addToWishList('Mate')">Choose</button>
+        <br>
+        <label for="2">Cafe</label>
+        <button type="button" id="cafe" onclick="addToWishList('Cafe')">Choose</button>
+        <br>
+        <label for="3">Te</label>
+        <button type="button" id="te" onclick="addToWishList('Te')">Choose</button>
+    </form>
+    </div>
+    <h2>My Wishlist</h2>
+    <ul id="wishlist" class="myList"></ul>
+    <script src="script.js"></script>
+</body>
+</html>
